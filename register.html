@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0b0f19;
+      color: white;
+    }
+
+    header{
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(33, 2, 168);
+    }
+
+    nav{
+      background-color: rgb(11, 80, 207);
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 15px;
+    }
+
+    .content{
+      max-width: 500px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .form-box{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .form-box input, .form-box select{
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid rgb(11, 80, 207);
+      outline: none;
+      font-size: 16px;
+    }
+
+    .btn{
+      padding: 12px;
+      border-radius: 12px;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      background: #25D366;
+    }
+
+    .btn:hover{
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>SIGN UP</h2>
+    <p>Create your account</p>
+  </header>
+
+  <nav>
+    <a href="mubest.html">Home</a>
+  </nav>
+
+  <section class="content">
+    <form class="form-box">
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="password" placeholder="Create Password" required>
+
+      <select required>
+        <option value="">Select Class</option>
+        <option>Web Design</option>
+        <option>Graphic Design</option>
+      </select>
+
+      <button class="btn" type="submit">Register</button>
+
+      <p style="margin-top:15px;">
+        Already have an account?
+        <a href="mubest.html" style="color:#ffd700; font-weight:bold;">Login</a>
+      </p>
+    </form>
+  </section>
+
+</body>
+</html>

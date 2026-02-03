@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Mubest</title>
+
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0b0f19;
+      color: white;
+    }
+
+    header{
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(33, 2, 168);
+    }
+
+    nav{
+      background-color: rgb(11, 80, 207);
+      text-align: center;
+      padding: 12px;
+    }
+
+   nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
+    .content{
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .title{
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .line{
+      font-size: 20px;
+      line-height: 1.8;
+      margin: 12px 0;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: showUp 0.8s ease forwards;
+    }
+
+    .line1{ animation-delay: 0.2s; }
+    .line2{ animation-delay: 0.6s; }
+    .line3{ animation-delay: 1.0s; }
+    .line4{ animation-delay: 1.4s; }
+    .line5{ animation-delay: 1.8s; }
+    .line6{ animation-delay: 2.2s; }
+    .line7{ animation-delay: 2.6s; }
+
+    @keyframes showUp{
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .year{
+      color: rgb(11, 80, 207);
+      font-weight: bold;
+    }
+
+    .highlight{
+      color: #ffd700;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>ABOUT ME</h2>
+    <p>My Journey and Growth</p>
+  </header>
+
+  <nav>
+    <a href="mubest.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="skill.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="content">
+    <h1 class="title">Hello, I'm <span class="highlight">Yusuff Mubarak Ayinde</span> (Mubest)</h1>
+
+    <p class="line line1">
+      I am a <span class="highlight">Computer Science</span> student of <span class="highlight">The Federal Polytechnic, Ede</span>.
+    </p>
+
+    <p class="line line2">
+      I am passionate about technology and I love learning new skills to improve myself every day.
+    </p>
+
+    <p class="line line3">
+      <span class="year">2018 – 2021:</span> I learned Computer Operation at Skybound Adesiyan, Ona Ara, Ibadan and got a certificate.
+    </p>
+
+    <p class="line line4">
+      <span class="year">2021 – 2022:</span> I improved my Graphic Design skills at NITDA, UNILAG, Lagos. and also got a certificate.
+    </p>
+
+    <p class="line line5">
+      <span class="year">2024:</span> I started learning Coding and focused on building websites.
+    </p>
+
+    <p class="line line6">
+      <span class="year">2025:</span> I started learning Cybersecurity and I am still improving.
+    </p>
+
+    <p class="line line7">
+      My goal is to become a professional in tech and make impact with my skills.
+    </p>
+  </section>
+
+</body>
+</html>

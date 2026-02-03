@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mubest Profile</title>
+
+  <style>
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #0b0f19;
+      color: white;
+    }
+
+    header{
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(33, 2, 168);
+    }
+
+    nav{
+      background-color: rgb(11, 80, 207);
+      text-align: center;
+      padding: 12px;
+    }
+nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 6px;
+}
+
+nav a::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
+    .content{
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .profile-head{
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .profile-img{
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid rgb(11, 80, 207);
+      opacity: 0;
+      transform: translateY(25px);
+      animation: showUp 0.8s ease forwards;
+      animation-delay: 0.2s;
+    }
+
+    .name-area{
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .name-area h1{
+      font-size: 35px;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: showUp 0.8s ease forwards;
+      animation-delay: 0.6s;
+    }
+
+    .name-area p{
+      font-size: 18px;
+      margin-top: 10px;
+      line-height: 1.7;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: showUp 0.8s ease forwards;
+      animation-delay: 1s;
+    }
+
+    .line{
+      font-size: 20px;
+      line-height: 1.8;
+      margin: 12px 0;
+      opacity: 0;
+      transform: translateY(25px);
+      animation: showUp 0.8s ease forwards;
+    }
+
+    .line1{ animation-delay: 1.4s; }
+    .line2{ animation-delay: 1.8s; }
+    .line3{ animation-delay: 2.2s; }
+    .line4{ animation-delay: 2.6s; }
+    .line5{ animation-delay: 3.0s; }
+
+    @keyframes showUp{
+      to{
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .highlight{
+      color: #ffd700;
+      font-weight: bold;
+    }
+
+    .tag{
+      color: rgb(11, 80, 207);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h2>PROFILE</h2>
+    <p>Full Profile Information</p>
+  </header>
+
+  <nav>
+    <a href="mubest.html">Home</a>
+    <a href="profile.html">Profile</a>
+    <a href="about.html">About</a>
+    <a href="skill.html">Skills</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section class="content">
+
+    <div class="profile-head">
+      <img src="myimage.jpg" alt="Mubest Photo" class="profile-img">
+
+      <div class="name-area">
+        <h1><span class="highlight">Yusuff Mubarak Ayinde</span></h1>
+        <p>
+          I am a student of <span class="highlight">The Federal Polytechnic, Ede</span>,
+          studying <span class="highlight">Computer Science</span>.
+        </p>
+      </div>
+    </div>
+
+    <p class="line line1">
+      <span class="tag">Web Design:</span> HTML, CSS, JavaScript
+    </p>
+
+    <p class="line line2">
+      <span class="tag">Cybersecurity:</span> Ethical Hacking, L1, L2
+    </p>
+
+    <p class="line line3">
+      <span class="tag">Graphic Design:</span> CorelDRAW, Figma, Canva
+    </p>
+
+    <p class="line line4">
+      <span class="tag">Personal:</span> Male | Muslim | Single
+    </p>
+
+    <p class="line line5">
+      <span class="tag">DOB:</span> 11th May
+    </p>
+
+  </section>
+
+</body>
+</html>

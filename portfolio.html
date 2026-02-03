@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<!--
+  Professional Portfolio Website
+  Built with: HTML + CSS only
+  Author: Prince Mubest
+-->
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Mubest | Portfolio</title>
+
+  <!-- Link to CSS -->
+  <style>
+    /*
+  Professional Portfolio Styling
+  Author: Prince Mubest
+*/
+
+/* ====== RESET ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ====== GLOBAL ====== */
+body {
+  font-family: Arial, sans-serif;
+  background: #0b0f19;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  background: rgba(10, 15, 25, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.nav-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #00ffd5;
+}
+
+nav a {
+  margin-left: 15px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+nav a:hover {
+  opacity: 1;
+  color: #00ffd5;
+}
+
+/* ====== HERO ====== */
+.hero {
+  padding: 60px 0;
+}
+
+.hero-flex {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.tag {
+  color: #00ffd5;
+  margin-bottom: 10px;
+}
+
+.hero-text h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+}
+
+.primary {
+  background: #00ffd5;
+  color: #0b0f19;
+}
+
+.outline {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+/* Mini info */
+.mini-info {
+  display: flex;
+  gap: 20px;
+}
+
+.mini-info div {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 12px;
+  border-radius: 12px;
+  width: 120px;
+  text-align: center;
+}
+
+.mini-info h3 {
+  color: #00ffd5;
+}
+
+/* Hero Card */
+.hero-card {
+  flex: 1;
+  min-width: 260px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.small {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #00ffd5;
+  border-radius: 50%;
+}
+
+.card-badges {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.card-badges span {
+  background: rgba(0, 255, 213, 0.15);
+  color: #00ffd5;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* ====== SECTIONS ====== */
+.section {
+  padding: 60px 0;
+}
+
+.light {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+/* Grid 2 columns */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.list {
+  margin-top: 10px;
+}
+
+.list li {
+  margin-bottom: 10px;
+}
+
+/* Skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Projects */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.project-tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+}
+
+.project-tags span {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Contact */
+.contact-box {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.contact-form {
+  margin-top: 15px;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  outline: none;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="container nav-flex">
+      <h1 class="logo">Mubest<span>.</span></h1>
+
+      <nav>
+        <!-- Navigation links -->
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section id="home" class="hero">
+    <div class="container hero-flex">
+
+      <div class="hero-text">
+        <p class="tag">👋 Hello, I'm</p>
+        <h2>Prince Mubest</h2>
+        <p class="subtitle">
+          A <b>Web Designer</b> and <b>Frontend Developer</b> creating clean and modern websites using HTML & CSS.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn outline" href="#contact">Contact Me</a>
+        </div>
+
+        <div class="mini-info">
+          <div>
+            <h3>3+</h3>
+            <p>Months SIWES</p>
+          </div>
+          <div>
+            <h3>10+</h3>
+            <p>Practice Projects</p>
+          </div>
+          <div>
+            <h3>100%</h3>
+            <p>Consistency</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side card -->
+      <div class="hero-card">
+        <div class="card-top">
+          <p class="small">Available for work</p>
+          <span class="status-dot"></span>
+        </div>
+
+        <h3>Frontend Developer</h3>
+        <p>
+          I build responsive websites with clean code and good user experience.
+        </p>
+
+        <div class="card-badges">
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>UI Design</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+
+      <div class="grid-2">
+        <div class="about-box">
+          <h3>Who I am</h3>
+          <p>
+            I’m Prince Mubest, a student and upcoming tech professional.
+            I focus on building modern websites with good structure and clean design.
+          </p>
+          <p>
+            I’m currently improving my skills in web development and learning cybersecurity gradually.
+          </p>
+        </div>
+
+        <div class="about-box">
+          <h3>What I do</h3>
+          <ul class="list">
+            <li>✔ Landing Pages</li>
+            <li>✔ Portfolio Websites</li>
+            <li>✔ Business Websites</li>
+            <li>✔ Simple UI Designs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section id="skills" class="section light">
+    <div class="container">
+      <h2 class="section-title">My Skills</h2>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>HTML</h3>
+          <p>Good structure, clean tags, semantic layout.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>CSS</h3>
+          <p>Modern styling, responsive layout, animations.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>UI Design</h3>
+          <p>Simple and clean designs that look professional.</p>
+        </div>
+
+        <div class="skill-card">
+          <h3>Team Work</h3>
+          <p>Communication, collaboration, consistency.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3>Personal Portfolio</h3>
+          <p>
+            A modern portfolio website built with HTML and CSS.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>Business Landing Page</h3>
+          <p>
+            A clean business landing page with responsive design.
+          </p>
+          <div class="project-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <h3>Contact Form UI</h3>
+          <p>
+            A simple contact page layout with a modern look.
+          </p>
+          <div class="project-tags">
+            <span>UI</span>
+            <span>Design</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section id="contact" class="section light">
+    <div class="container">
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-box">
+        <p>
+          Want to work with me or check my portfolio?
+          Send me a message below 👇
+        </p>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+
+          <button class="btn primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container footer-flex">
+      <p>© 2026 Prince Mubest. All Rights Reserved.</p>
+      <p class="small">Built with HTML + CSS</p>
+    </div>
+  </footer>
+
+</body>
+</html>
